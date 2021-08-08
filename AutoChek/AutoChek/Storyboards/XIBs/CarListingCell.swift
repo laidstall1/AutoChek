@@ -8,16 +8,32 @@
 import UIKit
 
 class CarListingCell: UICollectionViewCell {
+
+    //    MARK: - Properties
+    
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var carPrice: UILabel!
     @IBOutlet weak var carMake: UILabel!
+    @IBOutlet weak var carImageContainerView: UIView!
+    @IBOutlet weak var backgroundContainerView: UIView!
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var likeCarButton: UIButton!
     @IBOutlet weak var addCarButton: UIButton!
     
+    static var identifier = String(describing: CarListingCell.self)
+    
+    //    MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundContainerView.layer.cornerRadius = 20
+        carImageContainerView.layer.cornerRadius = 20
     }
 
+    static func nib() -> UINib {
+        return UINib(nibName: CarListingCell.identifier, bundle: nil)
+    }
+    
+    func configure() {
+        
+    }
 }
