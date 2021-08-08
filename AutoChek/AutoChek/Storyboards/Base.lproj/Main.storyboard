@@ -65,6 +65,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Xdc-oX-3xU"/>
+                    <connections>
+                        <outlet property="collectionView" destination="GYt-ca-YD7" id="Wmd-UK-oEK"/>
+                        <outlet property="searchBar" destination="UWV-Sr-tpa" id="dzm-D1-9Oz"/>
+                        <outlet property="tableView" destination="8Mw-2h-ofk" id="0kc-uq-T2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
