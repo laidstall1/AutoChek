@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+class HomeScreenViewController: UIViewController {
 
     //  MARK: - Properties
     
@@ -34,7 +34,7 @@ class RootViewController: UIViewController {
 
     //  MARK: - UITableViewDataSource
 
-extension RootViewController: UICollectionViewDataSource {
+extension HomeScreenViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
     }
@@ -47,6 +47,8 @@ extension RootViewController: UICollectionViewDataSource {
 
 //  MARK: - UITableViewDelegate
 
-extension RootViewController: UICollectionViewDelegate {
-    
+extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+    }
 }

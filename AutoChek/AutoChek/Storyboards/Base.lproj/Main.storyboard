@@ -12,7 +12,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="AutoChek" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="AutoChek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Xdc-oX-3xU"/>
                     <connections>
                         <outlet property="carCategoriesCollectionView" destination="GYt-ca-YD7" id="Wmd-UK-oEK"/>
+                        <outlet property="carListingCollectionView" destination="HQc-yn-xjV" id="eaS-6f-nBq"/>
                         <outlet property="searchBar" destination="UWV-Sr-tpa" id="dzm-D1-9Oz"/>
                     </connections>
                 </viewController>
