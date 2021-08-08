@@ -45,30 +45,46 @@
                                 <rect key="frame" x="20" y="64" width="374" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Mw-2h-ofk">
-                                <rect key="frame" x="20" y="255" width="374" height="558"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-yn-xjV">
+                                <rect key="frame" x="30" y="255" width="354" height="558"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qQe-RA-NRQ">
+                                    <size key="itemSize" width="278" height="312"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hnh-8F-QnV">
+                                        <rect key="frame" x="38" y="0.0" width="278" height="312"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8md-rg-Cj1">
+                                            <rect key="frame" x="0.0" y="0.0" width="278" height="312"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="278" height="312"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GYt-ca-YD7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="0rQ-f0-Bdg"/>
                             <constraint firstItem="GYt-ca-YD7" firstAttribute="top" secondItem="UWV-Sr-tpa" secondAttribute="bottom" constant="30" id="6Xw-KX-Wk1"/>
-                            <constraint firstItem="8Mw-2h-ofk" firstAttribute="top" secondItem="GYt-ca-YD7" secondAttribute="bottom" constant="30" id="B1Q-xh-tA5"/>
+                            <constraint firstItem="HQc-yn-xjV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="82i-xP-3Dt"/>
                             <constraint firstItem="UWV-Sr-tpa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="BwV-b3-Rhe"/>
                             <constraint firstItem="UWV-Sr-tpa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HKP-7C-VMF"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="8Mw-2h-ofk" secondAttribute="bottom" id="Iuh-6s-4ha"/>
-                            <constraint firstItem="8Mw-2h-ofk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O7h-4u-HKL"/>
+                            <constraint firstItem="HQc-yn-xjV" firstAttribute="top" secondItem="GYt-ca-YD7" secondAttribute="bottom" constant="30" id="LKa-Qm-Zwd"/>
+                            <constraint firstItem="HQc-yn-xjV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TBP-KM-8MU"/>
                             <constraint firstItem="UWV-Sr-tpa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="dMC-YM-nfd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Mw-2h-ofk" secondAttribute="trailing" constant="20" id="nti-h9-QES"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HQc-yn-xjV" secondAttribute="trailing" constant="30" id="pjK-eh-Usm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Xdc-oX-3xU"/>
                     <connections>
-                        <outlet property="collectionView" destination="GYt-ca-YD7" id="Wmd-UK-oEK"/>
+                        <outlet property="carCategoriesCollectionView" destination="GYt-ca-YD7" id="Wmd-UK-oEK"/>
                         <outlet property="searchBar" destination="UWV-Sr-tpa" id="dzm-D1-9Oz"/>
-                        <outlet property="tableView" destination="8Mw-2h-ofk" id="0kc-uq-T2h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
