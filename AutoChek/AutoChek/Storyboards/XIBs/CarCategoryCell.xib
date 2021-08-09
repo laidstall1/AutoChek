@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbZ-5z-aG9">
                         <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="benz_logo" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-JD-NdV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="benz_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-JD-NdV">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="MtF-Xx-2hO"/>
@@ -39,7 +39,7 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Make" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqV-xk-YWx">
                         <rect key="frame" x="0.0" y="78" width="70" height="8"/>
-                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -53,15 +53,17 @@
                 <constraint firstItem="YqV-xk-YWx" firstAttribute="centerX" secondItem="AbZ-5z-aG9" secondAttribute="centerX" id="Wbq-OC-hKC"/>
                 <constraint firstItem="AbZ-5z-aG9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b1N-5T-hWf"/>
                 <constraint firstItem="YqV-xk-YWx" firstAttribute="top" secondItem="AbZ-5z-aG9" secondAttribute="bottom" constant="8" id="u5j-Gr-sKc"/>
+                <constraint firstAttribute="bottom" secondItem="YqV-xk-YWx" secondAttribute="bottom" constant="4" id="xdm-rx-LfN"/>
                 <constraint firstItem="YqV-xk-YWx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xmg-Rf-fEZ"/>
                 <constraint firstAttribute="bottom" secondItem="YqV-xk-YWx" secondAttribute="bottom" constant="4" id="z5A-Li-fN7"/>
             </constraints>
             <size key="customSize" width="80" height="77"/>
             <connections>
-                <outlet property="carCategoryImageView" destination="AbZ-5z-aG9" id="ulu-nh-dDS"/>
+                <outlet property="carCategoryContainerView" destination="AbZ-5z-aG9" id="ulu-nh-dDS"/>
+                <outlet property="carCategoryImageView" destination="wIg-JD-NdV" id="kK8-vR-0oj"/>
                 <outlet property="carCategoryName" destination="YqV-xk-YWx" id="IDf-8n-uZk"/>
             </connections>
-            <point key="canvasLocation" x="111.59420289855073" y="117.1875"/>
+            <point key="canvasLocation" x="111.59420289855073" y="116.85267857142857"/>
         </collectionViewCell>
     </objects>
     <resources>

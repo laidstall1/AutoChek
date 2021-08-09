@@ -6,18 +6,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CarCategoryCell: UICollectionViewCell {
     
     //    MARK: - Properties
-    @IBOutlet weak var carCategoryImageView: UIView!
+    
+    @IBOutlet weak var carCategoryContainerView: UIView!
+    @IBOutlet weak var carCategoryImageView: UIImageView!
     @IBOutlet weak var carCategoryName: UILabel!
     
     static var identifier = String(describing: CarCategoryCell.self)
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        carCategoryImageView.layer.cornerRadius = carCategoryImageView.frame.height / 2
+        carCategoryContainerView.layer.cornerRadius = carCategoryContainerView.frame.height / 2
         // Initialization code
     }
     
@@ -25,7 +28,10 @@ class CarCategoryCell: UICollectionViewCell {
         return UINib(nibName: CarCategoryCell.identifier, bundle: nil)
     }
     
-    func configure() {
-        
+    func configure(with model: MakeList) {
+        carCategoryName.text = model.name
+        print(carCategoryName.text!)
+        guard let imageUrl = URL(string: model.imageURL) else {return }
+        carCategoryImageView.sd_setImage(with: imageUrl)
     }
 }
