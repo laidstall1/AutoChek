@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SDWebImageSVGCoder
 
 class CarCategoryCell: UICollectionViewCell {
     
@@ -21,7 +22,7 @@ class CarCategoryCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         carCategoryContainerView.layer.cornerRadius = carCategoryContainerView.frame.height / 2
-        // Initialization code
+        carCategoryName.numberOfLines = 0
     }
     
     static func nib() -> UINib {
@@ -33,5 +34,6 @@ class CarCategoryCell: UICollectionViewCell {
         print(carCategoryName.text!)
         guard let imageUrl = URL(string: model.imageURL) else {return }
         carCategoryImageView.sd_setImage(with: imageUrl)
+        
     }
 }

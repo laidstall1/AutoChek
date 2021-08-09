@@ -21,10 +21,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="benz_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-JD-NdV">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="MtF-Xx-2hO"/>
-                                    <constraint firstAttribute="height" constant="70" id="Yvw-Ca-3gX"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94114202260000002" green="0.93707716460000001" blue="0.94934111830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,7 +46,6 @@
                 <constraint firstAttribute="trailing" secondItem="AbZ-5z-aG9" secondAttribute="trailing" id="PdQ-Nv-FAs"/>
                 <constraint firstAttribute="trailing" secondItem="YqV-xk-YWx" secondAttribute="trailing" id="R9O-Bi-Lc6"/>
                 <constraint firstItem="AbZ-5z-aG9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Umu-55-USL"/>
-                <constraint firstItem="YqV-xk-YWx" firstAttribute="centerX" secondItem="AbZ-5z-aG9" secondAttribute="centerX" id="Wbq-OC-hKC"/>
                 <constraint firstItem="AbZ-5z-aG9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b1N-5T-hWf"/>
                 <constraint firstItem="YqV-xk-YWx" firstAttribute="top" secondItem="AbZ-5z-aG9" secondAttribute="bottom" constant="8" id="u5j-Gr-sKc"/>
                 <constraint firstAttribute="bottom" secondItem="YqV-xk-YWx" secondAttribute="bottom" constant="4" id="xdm-rx-LfN"/>
@@ -63,7 +58,7 @@
                 <outlet property="carCategoryImageView" destination="wIg-JD-NdV" id="kK8-vR-0oj"/>
                 <outlet property="carCategoryName" destination="YqV-xk-YWx" id="IDf-8n-uZk"/>
             </connections>
-            <point key="canvasLocation" x="111.59420289855073" y="116.85267857142857"/>
+            <point key="canvasLocation" x="111.59420289855073" y="116.51785714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -35,7 +35,7 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ijq-pH-wez">
-                                <rect key="frame" x="25" y="156" width="194" height="54"/>
+                                <rect key="frame" x="25" y="156" width="194" height="55.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLD-e8-VbA">
                                         <rect key="frame" x="0.0" y="0.0" width="194" height="19.5"/>
@@ -44,13 +44,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAR MAKE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQh-7y-cWj">
-                                        <rect key="frame" x="0.0" y="23.5" width="194" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <rect key="frame" x="0.0" y="23.5" width="194" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$115.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fde-FR-3jR">
-                                        <rect key="frame" x="0.0" y="39.5" width="194" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="41" width="194" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -67,10 +67,6 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car1" translatesAutoresizingMaskIntoConstraints="NO" id="TmR-I5-i3A">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="220"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="220" id="PBw-G6-HwU"/>
-                                            <constraint firstAttribute="width" constant="250" id="wqT-4m-Vqb"/>
-                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZ2-Hh-bv0">
                                         <rect key="frame" x="210" y="10" width="30" height="30"/>
@@ -121,8 +117,8 @@
             <connections>
                 <outlet property="addCarButton" destination="Hdf-BX-KzJ" id="M3o-6K-2sT"/>
                 <outlet property="backgroundContainerView" destination="OTK-dU-nTH" id="tG7-Jj-PYo"/>
-                <outlet property="carImage" destination="TmR-I5-i3A" id="t4t-Lc-IUu"/>
                 <outlet property="carImageContainerView" destination="Q20-IX-OrB" id="Txb-Gr-sJk"/>
+                <outlet property="carImageView" destination="TmR-I5-i3A" id="t4t-Lc-IUu"/>
                 <outlet property="carMake" destination="OQh-7y-cWj" id="CKK-UW-FXt"/>
                 <outlet property="carName" destination="SLD-e8-VbA" id="yRu-IA-R5y"/>
                 <outlet property="carPrice" destination="fde-FR-3jR" id="Tlg-sI-dX8"/>

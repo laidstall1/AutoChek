@@ -22,6 +22,7 @@ class HomeScreenViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9685223699, green: 0.9686879516, blue: 0.9685119987, alpha: 1)
         collectionViewSetup()
         fetchCarMake()
+        fetchCarListing()
     }
 
     
@@ -35,13 +36,21 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
+    func fetchCarListing() {
+        self.viewModel.fetchCarListing {
+            DispatchQueue.main.async {
+                self.carListingCollectionView.reloadData()
+            }
+        }
+    }
+    
     func collectionViewSetup() {
         carCategoriesCollectionView.delegate = self
         carCategoriesCollectionView.dataSource = self
-//        carListingCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         carListingCollectionView.delegate = self
         carListingCollectionView.dataSource = self
         carListingCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
         carListingCollectionView.register(CarListingCell.nib(), forCellWithReuseIdentifier: CarListingCell.identifier)
         carCategoriesCollectionView.register(CarCategoryCell.nib(), forCellWithReuseIdentifier: CarCategoryCell.identifier)
     }
@@ -51,18 +60,19 @@ class HomeScreenViewController: UIViewController {
 
 extension HomeScreenViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(viewModel.data.count)
-        return collectionView == carCategoriesCollectionView ? viewModel.data.count : 20
+        print(viewModel.carCategories.count)
+        return collectionView == carCategoriesCollectionView ? viewModel.carCategories.count : viewModel.carListing.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == carCategoriesCollectionView {
             let cell = carCategoriesCollectionView.dequeueReusableCell(withReuseIdentifier: CarCategoryCell.identifier, for: indexPath) as! CarCategoryCell
-            cell.configure(with: viewModel.data[indexPath.row])
+            cell.configure(with: viewModel.carCategories[indexPath.item])
             return cell
         } else {
             let cell = carListingCollectionView.dequeueReusableCell(withReuseIdentifier: CarListingCell.identifier, for: indexPath) as! CarListingCell
+            cell.configure(with: viewModel.carListing[indexPath.item])
             return cell
         }
     }
@@ -73,7 +83,11 @@ extension HomeScreenViewController: UICollectionViewDataSource {
 
 extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width-136, height: 330)
+        if collectionView == carListingCollectionView {
+            return CGSize(width: view.frame.width-136, height: 330)
+        } else {
+            return CGSize(width: 70, height: 90)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

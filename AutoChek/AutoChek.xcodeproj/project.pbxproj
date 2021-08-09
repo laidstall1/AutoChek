@@ -10,7 +10,8 @@
 		042B702526C051C100BD008B /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B702426C051C100BD008B /* CarDetailViewController.swift */; };
 		048CCDDD26C0918500D1FE6F /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */; };
 		048CCDDF26C0CE9600D1FE6F /* HomeScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */; };
-		048CCDE226C0D31F00D1FE6F /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDE126C0D31F00D1FE6F /* CarModel.swift */; };
+		048CCDE226C0D31F00D1FE6F /* CarMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDE126C0D31F00D1FE6F /* CarMake.swift */; };
+		048CCDE426C0F02700D1FE6F /* CarListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDE326C0F02700D1FE6F /* CarListingModel.swift */; };
 		04AB5DB426BEE44400464205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB5DB326BEE44400464205 /* AppDelegate.swift */; };
 		04AB5DB626BEE44400464205 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB5DB526BEE44400464205 /* SceneDelegate.swift */; };
 		04AB5DB826BEE44400464205 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB5DB726BEE44400464205 /* HomeScreenViewController.swift */; };
@@ -28,7 +29,8 @@
 		042B702426C051C100BD008B /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenService.swift; sourceTree = "<group>"; };
-		048CCDE126C0D31F00D1FE6F /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		048CCDE126C0D31F00D1FE6F /* CarMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMake.swift; sourceTree = "<group>"; };
+		048CCDE326C0F02700D1FE6F /* CarListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingModel.swift; sourceTree = "<group>"; };
 		04AB5DB026BEE44400464205 /* AutoChek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoChek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AB5DB326BEE44400464205 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04AB5DB526BEE44400464205 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +63,8 @@
 		048CCDE026C0D2FB00D1FE6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				048CCDE126C0D31F00D1FE6F /* CarModel.swift */,
+				048CCDE126C0D31F00D1FE6F /* CarMake.swift */,
+				048CCDE326C0F02700D1FE6F /* CarListingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,12 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048CCDE426C0F02700D1FE6F /* CarListingModel.swift in Sources */,
 				04AB5DCE26BF76E900464205 /* CarListingCell.swift in Sources */,
 				04AB5DB826BEE44400464205 /* HomeScreenViewController.swift in Sources */,
 				042B702526C051C100BD008B /* CarDetailViewController.swift in Sources */,
 				04AB5DB426BEE44400464205 /* AppDelegate.swift in Sources */,
 				048CCDDF26C0CE9600D1FE6F /* HomeScreenService.swift in Sources */,
-				048CCDE226C0D31F00D1FE6F /* CarModel.swift in Sources */,
+				048CCDE226C0D31F00D1FE6F /* CarMake.swift in Sources */,
 				04B3915626BF87DC00E218FE /* CarCategoryCell.swift in Sources */,
 				04AB5DB626BEE44400464205 /* SceneDelegate.swift in Sources */,
 				048CCDDD26C0918500D1FE6F /* HomeScreenViewModel.swift in Sources */,

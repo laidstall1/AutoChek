@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CarModel: Codable {
+struct CarMake: Codable {
     let makeList: [MakeList]
 }
 

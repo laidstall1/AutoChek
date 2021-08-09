@@ -16,7 +16,7 @@ class CarListingCell: UICollectionViewCell {
     @IBOutlet weak var carMake: UILabel!
     @IBOutlet weak var carImageContainerView: UIView!
     @IBOutlet weak var backgroundContainerView: UIView!
-    @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var carImageView: UIImageView!
     @IBOutlet weak var likeCarButton: UIButton!
     @IBOutlet weak var addCarButton: UIButton!
     
@@ -33,7 +33,10 @@ class CarListingCell: UICollectionViewCell {
         return UINib(nibName: CarListingCell.identifier, bundle: nil)
     }
     
-    func configure() {
-        
+    func configure(with model: CarDetailModel) {
+        carName.text = model.title
+        carMake.text = "YEAR: \(model.year!)"
+        guard let imageUrl = URL(string: model.imageURL!) else { return }
+        carImageView.sd_setImage(with: imageUrl)
     }
 }
