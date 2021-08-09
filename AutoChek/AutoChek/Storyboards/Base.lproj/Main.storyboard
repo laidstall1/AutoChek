@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1871.0144927536232" y="-222.32142857142856"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="cIE-G7-ahK">
             <objects>
                 <viewController storyboardIdentifier="Notifications" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bVM-35-ceF" sceneMemberID="viewController">
@@ -103,16 +103,16 @@
                         <viewLayoutGuide key="safeArea" id="zDZ-L5-ChG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9iA-Kr-zr9"/>
+                    <tabBarItem key="tabBarItem" title="" id="9iA-Kr-zr9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gz-hO-1aa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="961" y="540"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar View Controller-->
         <scene sceneID="pfZ-WM-sUN">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Z43-LE-OO4" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Z43-LE-OO4" customClass="CustomTabBarViewController" customModule="AutoChek" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dbi-qX-kK6">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -147,7 +147,7 @@
             </objects>
             <point key="canvasLocation" x="2797.1014492753625" y="-222.32142857142856"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="8aQ-kw-H7T">
             <objects>
                 <viewController storyboardIdentifier="Messages" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QL0-DQ-3t4" sceneMemberID="viewController">
@@ -157,33 +157,33 @@
                         <viewLayoutGuide key="safeArea" id="cMJ-Q2-swR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="kVc-iv-wkI"/>
+                    <tabBarItem key="tabBarItem" title="" id="kVc-iv-wkI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DZ-7G-0Km" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1887" y="540"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="lN2-ut-ZpM">
             <objects>
-                <viewController id="wNy-34-Hao" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShopScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wNy-34-Hao" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TSP-Bl-F1h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qvi-Pf-k68"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="s7g-XP-MFO"/>
+                    <tabBarItem key="tabBarItem" title="" id="s7g-XP-MFO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pw-rP-InN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="25" y="1151"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="7cy-PJ-Rgb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mRN-gw-t9f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="Xdc-oX-3xU">
+                    <tabBarItem key="tabBarItem" title="" id="Xdc-oX-3xU">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="10" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>

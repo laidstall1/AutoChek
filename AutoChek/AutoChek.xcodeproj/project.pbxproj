@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		042B702526C051C100BD008B /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B702426C051C100BD008B /* CarDetailViewController.swift */; };
+		046EAE3426C130AF00640304 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3326C130AF00640304 /* CustomTabBarController.swift */; };
 		048CCDDD26C0918500D1FE6F /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */; };
 		048CCDDF26C0CE9600D1FE6F /* HomeScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */; };
 		048CCDE226C0D31F00D1FE6F /* CarMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDE126C0D31F00D1FE6F /* CarMake.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		042B702426C051C100BD008B /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
+		046EAE3326C130AF00640304 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenService.swift; sourceTree = "<group>"; };
 		048CCDE126C0D31F00D1FE6F /* CarMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMake.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046EAE3526C130BA00640304 /* Custom TabBar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				046EAE3326C130AF00640304 /* CustomTabBarController.swift */,
+			);
+			path = "Custom TabBar Controller";
+			sourceTree = "<group>";
+		};
 		048CCDE026C0D2FB00D1FE6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		04AB5DC726BF667600464205 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				046EAE3526C130BA00640304 /* Custom TabBar Controller */,
 				04AB5DB726BEE44400464205 /* HomeScreenViewController.swift */,
 				048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */,
 				048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */,
@@ -279,6 +290,7 @@
 				04AB5DB826BEE44400464205 /* HomeScreenViewController.swift in Sources */,
 				042B702526C051C100BD008B /* CarDetailViewController.swift in Sources */,
 				04AB5DB426BEE44400464205 /* AppDelegate.swift in Sources */,
+				046EAE3426C130AF00640304 /* CustomTabBarController.swift in Sources */,
 				048CCDDF26C0CE9600D1FE6F /* HomeScreenService.swift in Sources */,
 				048CCDE226C0D31F00D1FE6F /* CarMake.swift in Sources */,
 				04B3915626BF87DC00E218FE /* CarCategoryCell.swift in Sources */,
