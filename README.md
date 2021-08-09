@@ -9,4 +9,4 @@
 
 ## How to test:
 - install cocoapods
-- using the terminal, navigate to the project directory then run ****pod install
+- using the terminal, navigate to the project directory then run ****pod install****
