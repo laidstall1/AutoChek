@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-yn-xjV">
-                                <rect key="frame" x="30" y="223" width="354" height="590"/>
+                                <rect key="frame" x="30" y="213" width="354" height="600"/>
                                 <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dfx-K8-vxE">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Dfx-K8-vxE">
                                     <size key="itemSize" width="300" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -67,7 +67,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HQc-yn-xjV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="82i-xP-3Dt"/>
-                            <constraint firstItem="HQc-yn-xjV" firstAttribute="top" secondItem="UqX-nd-DIr" secondAttribute="bottom" constant="10" id="DWr-Wi-c1f"/>
+                            <constraint firstItem="HQc-yn-xjV" firstAttribute="top" secondItem="UqX-nd-DIr" secondAttribute="bottom" id="DWr-Wi-c1f"/>
                             <constraint firstItem="HQc-yn-xjV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TBP-KM-8MU"/>
                             <constraint firstItem="UqX-nd-DIr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Tr5-Vc-pFC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UqX-nd-DIr" secondAttribute="trailing" constant="20" id="VC6-K0-XhM"/>

@@ -13,9 +13,7 @@ class HomeScreenViewController: UIViewController {
     private let searchController = UISearchController()
     private let viewModel = HomeScreenViewModel()
     @IBOutlet weak var carCategoriesCollectionView: UICollectionView!
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var carListingCollectionView: UICollectionView!
-    var name = ""
     
     //  MARK: - Lifecycle
     
@@ -31,7 +29,6 @@ class HomeScreenViewController: UIViewController {
                 self.carListingCollectionView.reloadData()
             }
         }
-        
     }
 
     
@@ -68,6 +65,7 @@ class HomeScreenViewController: UIViewController {
         navigationItem.searchController = searchController
         searchController.searchBar.showsCancelButton = false
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = false
         searchController.searchBar.delegate = self
         if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
@@ -104,7 +102,7 @@ extension HomeScreenViewController: UICollectionViewDataSource {
 extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == carListingCollectionView {
-            return CGSize(width: view.frame.width-136, height: 330)
+            return CGSize(width: 350, height: 400)
         } else {
             return CGSize(width: 64, height: 90)
         }

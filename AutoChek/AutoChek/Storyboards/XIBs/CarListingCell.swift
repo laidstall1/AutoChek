@@ -35,8 +35,8 @@ class CarListingCell: UICollectionViewCell {
     
     func configure(with model: CarDetailModel) {
         carName.text = model.title
-        carMake.text = "YEAR: \(model.year!)"
-        carPrice.text = "PRICE: #\(model.marketplacePrice!)"
+        carMake.text = "Year: \(model.year!)"
+        carPrice.text = "Price: ₦\(model.marketplacePrice!)"
         guard let imageUrl = URL(string: model.imageURL!) else { return }
         carImageView.sd_setImage(with: imageUrl)
     }
