@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		042B702526C051C100BD008B /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B702426C051C100BD008B /* CarDetailViewController.swift */; };
 		046EAE3426C130AF00640304 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3326C130AF00640304 /* CustomTabBarController.swift */; };
+		046EAE3726C18EA300640304 /* CarDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3626C18EA300640304 /* CarDetailsViewModel.swift */; };
+		046EAE3926C1913F00640304 /* CarDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3826C1913F00640304 /* CarDetailModel.swift */; };
+		046EAE3C26C19A3F00640304 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 046EAE3B26C19A3F00640304 /* SwiftyJSON */; };
 		048CCDDD26C0918500D1FE6F /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */; };
 		048CCDDF26C0CE9600D1FE6F /* HomeScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */; };
 		048CCDE226C0D31F00D1FE6F /* CarMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDE126C0D31F00D1FE6F /* CarMake.swift */; };
@@ -29,6 +32,8 @@
 /* Begin PBXFileReference section */
 		042B702426C051C100BD008B /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		046EAE3326C130AF00640304 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		046EAE3626C18EA300640304 /* CarDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsViewModel.swift; sourceTree = "<group>"; };
+		046EAE3826C1913F00640304 /* CarDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailModel.swift; sourceTree = "<group>"; };
 		048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenService.swift; sourceTree = "<group>"; };
 		048CCDE126C0D31F00D1FE6F /* CarMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMake.swift; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046EAE3C26C19A3F00640304 /* SwiftyJSON in Frameworks */,
 				C6C3E988951BEDB4C9771E68 /* Pods_AutoChek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +81,7 @@
 			children = (
 				048CCDE126C0D31F00D1FE6F /* CarMake.swift */,
 				048CCDE326C0F02700D1FE6F /* CarListingModel.swift */,
+				046EAE3826C1913F00640304 /* CarDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 				048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */,
 				048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */,
 				042B702426C051C100BD008B /* CarDetailViewController.swift */,
+				046EAE3626C18EA300640304 /* CarDetailsViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +195,9 @@
 			dependencies = (
 			);
 			name = AutoChek;
+			packageProductDependencies = (
+				046EAE3B26C19A3F00640304 /* SwiftyJSON */,
+			);
 			productName = AutoChek;
 			productReference = 04AB5DB026BEE44400464205 /* AutoChek.app */;
 			productType = "com.apple.product-type.application";
@@ -214,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 04AB5DA726BEE44400464205;
+			packageReferences = (
+				046EAE3A26C19A3E00640304 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 04AB5DB126BEE44400464205 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,9 +303,11 @@
 				04AB5DCE26BF76E900464205 /* CarListingCell.swift in Sources */,
 				04AB5DB826BEE44400464205 /* HomeScreenViewController.swift in Sources */,
 				042B702526C051C100BD008B /* CarDetailViewController.swift in Sources */,
+				046EAE3726C18EA300640304 /* CarDetailsViewModel.swift in Sources */,
 				04AB5DB426BEE44400464205 /* AppDelegate.swift in Sources */,
 				046EAE3426C130AF00640304 /* CustomTabBarController.swift in Sources */,
 				048CCDDF26C0CE9600D1FE6F /* HomeScreenService.swift in Sources */,
+				046EAE3926C1913F00640304 /* CarDetailModel.swift in Sources */,
 				048CCDE226C0D31F00D1FE6F /* CarMake.swift in Sources */,
 				04B3915626BF87DC00E218FE /* CarCategoryCell.swift in Sources */,
 				04AB5DB626BEE44400464205 /* SceneDelegate.swift in Sources */,
@@ -499,6 +515,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		046EAE3A26C19A3E00640304 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		046EAE3B26C19A3F00640304 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 046EAE3A26C19A3E00640304 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04AB5DA826BEE44400464205 /* Project object */;
 }

@@ -17,14 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="UWV-Sr-tpa">
-                                <rect key="frame" x="20" y="98" width="374" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HQc-yn-xjV">
-                                <rect key="frame" x="30" y="258" width="354" height="555"/>
+                                <rect key="frame" x="30" y="213" width="354" height="600"/>
                                 <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dfx-K8-vxE">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Dfx-K8-vxE">
                                     <size key="itemSize" width="300" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -43,13 +39,13 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UqX-nd-DIr">
-                                <rect key="frame" x="20" y="159" width="374" height="95"/>
+                                <rect key="frame" x="20" y="118" width="374" height="95"/>
                                 <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="nvk-H7-5VY"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="rqM-Jh-8Ju">
-                                    <size key="itemSize" width="80" height="90"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="25" minimumInteritemSpacing="25" id="rqM-Jh-8Ju">
+                                    <size key="itemSize" width="64" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -71,22 +67,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HQc-yn-xjV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="82i-xP-3Dt"/>
-                            <constraint firstItem="UWV-Sr-tpa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="BwV-b3-Rhe"/>
-                            <constraint firstItem="HQc-yn-xjV" firstAttribute="top" secondItem="UqX-nd-DIr" secondAttribute="bottom" constant="4" id="DWr-Wi-c1f"/>
-                            <constraint firstItem="UWV-Sr-tpa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HKP-7C-VMF"/>
+                            <constraint firstItem="HQc-yn-xjV" firstAttribute="top" secondItem="UqX-nd-DIr" secondAttribute="bottom" id="DWr-Wi-c1f"/>
                             <constraint firstItem="HQc-yn-xjV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TBP-KM-8MU"/>
+                            <constraint firstItem="UqX-nd-DIr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Tr5-Vc-pFC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UqX-nd-DIr" secondAttribute="trailing" constant="20" id="VC6-K0-XhM"/>
-                            <constraint firstItem="UWV-Sr-tpa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="dMC-YM-nfd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HQc-yn-xjV" secondAttribute="trailing" constant="30" id="pjK-eh-Usm"/>
-                            <constraint firstItem="UqX-nd-DIr" firstAttribute="top" secondItem="UWV-Sr-tpa" secondAttribute="bottom" constant="10" id="s72-bX-f0F"/>
                             <constraint firstItem="UqX-nd-DIr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="u4f-CV-Tgf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7d1-n7-TS7"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="7d1-n7-TS7"/>
                     <connections>
                         <outlet property="carCategoriesCollectionView" destination="UqX-nd-DIr" id="MHo-Ec-d2I"/>
                         <outlet property="carListingCollectionView" destination="HQc-yn-xjV" id="eaS-6f-nBq"/>
-                        <outlet property="searchBar" destination="UWV-Sr-tpa" id="dzm-D1-9Oz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -187,8 +179,8 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="10" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LvH-9d-YaK">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LvH-9d-YaK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

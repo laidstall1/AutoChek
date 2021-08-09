@@ -10,9 +10,9 @@ import UIKit
 class HomeScreenViewController: UIViewController {
 
     //  MARK: - Properties
+    private let searchController = UISearchController()
     private let viewModel = HomeScreenViewModel()
     @IBOutlet weak var carCategoriesCollectionView: UICollectionView!
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var carListingCollectionView: UICollectionView!
     
     //  MARK: - Lifecycle
@@ -23,6 +23,12 @@ class HomeScreenViewController: UIViewController {
         collectionViewSetup()
         fetchCarMake()
         fetchCarListing()
+        configureSearchController()
+        viewModel.completion = {
+            DispatchQueue.main.async {
+                self.carListingCollectionView.reloadData()
+            }
+        }
     }
 
     
@@ -54,6 +60,18 @@ class HomeScreenViewController: UIViewController {
         carListingCollectionView.register(CarListingCell.nib(), forCellWithReuseIdentifier: CarListingCell.identifier)
         carCategoriesCollectionView.register(CarCategoryCell.nib(), forCellWithReuseIdentifier: CarCategoryCell.identifier)
     }
+    
+    func configureSearchController() {
+        navigationItem.searchController = searchController
+        searchController.searchBar.showsCancelButton = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        definesPresentationContext = false
+        searchController.searchBar.delegate = self
+        if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.backgroundColor = .white
+        }
+    }
 }
 
     //  MARK: - UITableViewDataSource
@@ -61,7 +79,7 @@ class HomeScreenViewController: UIViewController {
 extension HomeScreenViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(viewModel.carCategories.count)
-        return collectionView == carCategoriesCollectionView ? viewModel.carCategories.count : viewModel.carListing.count
+        return collectionView == carCategoriesCollectionView ? viewModel.carCategories.count : viewModel.filteredCarListing.count
     }
     
     
@@ -72,21 +90,21 @@ extension HomeScreenViewController: UICollectionViewDataSource {
             return cell
         } else {
             let cell = carListingCollectionView.dequeueReusableCell(withReuseIdentifier: CarListingCell.identifier, for: indexPath) as! CarListingCell
-            cell.configure(with: viewModel.carListing[indexPath.item])
+            cell.configure(with: viewModel.filteredCarListing[indexPath.item])
             return cell
         }
     }
     
 }
 
-//  MARK: - UITableViewDelegate
+//  MARK: - UICollectionViewDelegate
 
 extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == carListingCollectionView {
-            return CGSize(width: view.frame.width-136, height: 330)
+            return CGSize(width: 350, height: 400)
         } else {
-            return CGSize(width: 70, height: 90)
+            return CGSize(width: 64, height: 90)
         }
     }
     
@@ -94,7 +112,25 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
         carListingCollectionView.deselectItem(at: indexPath, animated: true)
         if collectionView == carListingCollectionView {
             let controller = CarDetailViewController()
+            controller.viewModel.id = viewModel.filteredCarListing[indexPath.row].id!
             navigationController?.pushViewController(controller, animated: true)
         }
+            else {
+                carCategoriesCollectionView.deselectItem(at: indexPath, animated: true)
+                let name = self.viewModel.carCategories[indexPath.row].name
+                viewModel.beginSearch(for: name)
+                print(name)
+                print(viewModel.filteredCarListing)
+            }
+        }
+    }
+
+extension HomeScreenViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            viewModel.beginSearch(for: searchText)
+        }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.resignFirstResponder()
     }
 }
