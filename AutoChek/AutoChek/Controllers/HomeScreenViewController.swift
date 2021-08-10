@@ -20,7 +20,7 @@ class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9685223699, green: 0.9686879516, blue: 0.9685119987, alpha: 1)
-        collectionViewSetup()
+        ConfigureCollectionView()
         fetchCarMake()
         fetchCarListing()
         configureSearchController()
@@ -30,12 +30,14 @@ class HomeScreenViewController: UIViewController {
             }
         }
     }
-
+    //  MARK: - Selectors
     
+    @objc func showMenu() {
+    }
     //  MARK: - Helpers
     
     func fetchCarMake() {
-        self.viewModel.fetchCarMake {
+        viewModel.fetchCarMake {
             DispatchQueue.main.async {
                 self.carCategoriesCollectionView.reloadData()
             }
@@ -50,7 +52,7 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
-    func collectionViewSetup() {
+    func ConfigureCollectionView() {
         carCategoriesCollectionView.delegate = self
         carCategoriesCollectionView.dataSource = self
         carListingCollectionView.delegate = self
@@ -59,6 +61,11 @@ class HomeScreenViewController: UIViewController {
         
         carListingCollectionView.register(CarListingCell.nib(), forCellWithReuseIdentifier: CarListingCell.identifier)
         carCategoriesCollectionView.register(CarCategoryCell.nib(), forCellWithReuseIdentifier: CarCategoryCell.identifier)
+    }
+    
+    func configureNavBar() {
+        let navImage = UIImage(named: "NavMenu")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: navImage, style: .plain, target: self, action: #selector(showMenu))
     }
     
     func configureSearchController() {
@@ -73,8 +80,7 @@ class HomeScreenViewController: UIViewController {
         }
     }
 }
-
-    //  MARK: - UITableViewDataSource
+    //  MARK: - UICollectionViewDataSource
 
 extension HomeScreenViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -96,7 +102,6 @@ extension HomeScreenViewController: UICollectionViewDataSource {
     }
     
 }
-
 //  MARK: - UICollectionViewDelegate
 
 extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
@@ -114,13 +119,10 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
             let controller = CarDetailViewController()
             controller.viewModel.id = viewModel.filteredCarListing[indexPath.row].id!
             navigationController?.pushViewController(controller, animated: true)
-        }
-            else {
+        } else {
                 carCategoriesCollectionView.deselectItem(at: indexPath, animated: true)
                 let name = self.viewModel.carCategories[indexPath.row].name
                 viewModel.beginSearch(for: name)
-                print(name)
-                print(viewModel.filteredCarListing)
             }
         }
     }

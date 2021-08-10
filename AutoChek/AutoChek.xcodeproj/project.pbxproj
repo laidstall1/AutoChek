@@ -10,10 +10,15 @@
 		042B702526C051C100BD008B /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B702426C051C100BD008B /* CarDetailViewController.swift */; };
 		046EAE3426C130AF00640304 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3326C130AF00640304 /* CustomTabBarController.swift */; };
 		046EAE3726C18EA300640304 /* CarDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3626C18EA300640304 /* CarDetailsViewModel.swift */; };
-		046EAE3926C1913F00640304 /* CarDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3826C1913F00640304 /* CarDetailModel.swift */; };
+		046EAE3926C1913F00640304 /* SelectedCarDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3826C1913F00640304 /* SelectedCarDetailModel.swift */; };
 		046EAE3C26C19A3F00640304 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 046EAE3B26C19A3F00640304 /* SwiftyJSON */; };
+		046EAE4026C2300100640304 /* CarDetailCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE3E26C2300100640304 /* CarDetailCollectionCell.swift */; };
+		046EAE4126C2300100640304 /* CarDetailCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046EAE3F26C2300100640304 /* CarDetailCollectionCell.xib */; };
+		046EAE4326C2436200640304 /* CarDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046EAE4226C2436200640304 /* CarDetail.storyboard */; };
+		046EAE4626C24D1F00640304 /* CarDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EAE4426C24D1F00640304 /* CarDetailTableCell.swift */; };
+		046EAE4726C24D1F00640304 /* CarDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046EAE4526C24D1F00640304 /* CarDetailTableCell.xib */; };
 		048CCDDD26C0918500D1FE6F /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */; };
-		048CCDDF26C0CE9600D1FE6F /* HomeScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */; };
+		048CCDDF26C0CE9600D1FE6F /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDDE26C0CE9600D1FE6F /* CarService.swift */; };
 		048CCDE226C0D31F00D1FE6F /* CarMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDE126C0D31F00D1FE6F /* CarMake.swift */; };
 		048CCDE426C0F02700D1FE6F /* CarListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CCDE326C0F02700D1FE6F /* CarListingModel.swift */; };
 		04AB5DB426BEE44400464205 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AB5DB326BEE44400464205 /* AppDelegate.swift */; };
@@ -33,9 +38,14 @@
 		042B702426C051C100BD008B /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
 		046EAE3326C130AF00640304 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		046EAE3626C18EA300640304 /* CarDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsViewModel.swift; sourceTree = "<group>"; };
-		046EAE3826C1913F00640304 /* CarDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailModel.swift; sourceTree = "<group>"; };
+		046EAE3826C1913F00640304 /* SelectedCarDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarDetailModel.swift; sourceTree = "<group>"; };
+		046EAE3E26C2300100640304 /* CarDetailCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailCollectionCell.swift; sourceTree = "<group>"; };
+		046EAE3F26C2300100640304 /* CarDetailCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailCollectionCell.xib; sourceTree = "<group>"; };
+		046EAE4226C2436200640304 /* CarDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarDetail.storyboard; sourceTree = "<group>"; };
+		046EAE4426C24D1F00640304 /* CarDetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailTableCell.swift; sourceTree = "<group>"; };
+		046EAE4526C24D1F00640304 /* CarDetailTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailTableCell.xib; sourceTree = "<group>"; };
 		048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
-		048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenService.swift; sourceTree = "<group>"; };
+		048CCDDE26C0CE9600D1FE6F /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
 		048CCDE126C0D31F00D1FE6F /* CarMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMake.swift; sourceTree = "<group>"; };
 		048CCDE326C0F02700D1FE6F /* CarListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingModel.swift; sourceTree = "<group>"; };
 		04AB5DB026BEE44400464205 /* AutoChek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoChek.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,12 +86,20 @@
 			path = "Custom TabBar Controller";
 			sourceTree = "<group>";
 		};
+		046EAE3D26C223B900640304 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				048CCDDE26C0CE9600D1FE6F /* CarService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		048CCDE026C0D2FB00D1FE6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				048CCDE126C0D31F00D1FE6F /* CarMake.swift */,
 				048CCDE326C0F02700D1FE6F /* CarListingModel.swift */,
-				046EAE3826C1913F00640304 /* CarDetailModel.swift */,
+				046EAE3826C1913F00640304 /* SelectedCarDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,8 +125,9 @@
 		04AB5DB226BEE44400464205 /* AutoChek */ = {
 			isa = PBXGroup;
 			children = (
-				048CCDE026C0D2FB00D1FE6F /* Model */,
 				04AB5DC926BF668F00464205 /* App+Scene Delegates */,
+				048CCDE026C0D2FB00D1FE6F /* Model */,
+				046EAE3D26C223B900640304 /* Networking */,
 				04AB5DC726BF667600464205 /* Controllers */,
 				04AB5DCA26BF66AD00464205 /* Storyboards */,
 				04AB5DBC26BEE44700464205 /* Assets.xcassets */,
@@ -123,7 +142,6 @@
 				046EAE3526C130BA00640304 /* Custom TabBar Controller */,
 				04AB5DB726BEE44400464205 /* HomeScreenViewController.swift */,
 				048CCDDC26C0918500D1FE6F /* HomeScreenViewModel.swift */,
-				048CCDDE26C0CE9600D1FE6F /* HomeScreenService.swift */,
 				042B702426C051C100BD008B /* CarDetailViewController.swift */,
 				046EAE3626C18EA300640304 /* CarDetailsViewModel.swift */,
 			);
@@ -144,6 +162,7 @@
 			children = (
 				04AB5DCB26BF76AF00464205 /* XIBs */,
 				04AB5DB926BEE44400464205 /* Main.storyboard */,
+				046EAE4226C2436200640304 /* CarDetail.storyboard */,
 				04AB5DBE26BEE44700464205 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -156,6 +175,10 @@
 				04B3915426BF87DC00E218FE /* CarCategoryCell.swift */,
 				04B3915526BF87DC00E218FE /* CarCategoryCell.xib */,
 				04AB5DCD26BF76E900464205 /* CarListingCell.xib */,
+				046EAE3E26C2300100640304 /* CarDetailCollectionCell.swift */,
+				046EAE3F26C2300100640304 /* CarDetailCollectionCell.xib */,
+				046EAE4426C24D1F00640304 /* CarDetailTableCell.swift */,
+				046EAE4526C24D1F00640304 /* CarDetailTableCell.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -242,8 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046EAE4726C24D1F00640304 /* CarDetailTableCell.xib in Resources */,
 				04AB5DCF26BF76E900464205 /* CarListingCell.xib in Resources */,
 				04AB5DC026BEE44800464205 /* LaunchScreen.storyboard in Resources */,
+				046EAE4326C2436200640304 /* CarDetail.storyboard in Resources */,
+				046EAE4126C2300100640304 /* CarDetailCollectionCell.xib in Resources */,
 				04B3915726BF87DC00E218FE /* CarCategoryCell.xib in Resources */,
 				04AB5DBD26BEE44700464205 /* Assets.xcassets in Resources */,
 				04AB5DBB26BEE44400464205 /* Main.storyboard in Resources */,
@@ -306,9 +332,11 @@
 				046EAE3726C18EA300640304 /* CarDetailsViewModel.swift in Sources */,
 				04AB5DB426BEE44400464205 /* AppDelegate.swift in Sources */,
 				046EAE3426C130AF00640304 /* CustomTabBarController.swift in Sources */,
-				048CCDDF26C0CE9600D1FE6F /* HomeScreenService.swift in Sources */,
-				046EAE3926C1913F00640304 /* CarDetailModel.swift in Sources */,
+				048CCDDF26C0CE9600D1FE6F /* CarService.swift in Sources */,
+				046EAE3926C1913F00640304 /* SelectedCarDetailModel.swift in Sources */,
 				048CCDE226C0D31F00D1FE6F /* CarMake.swift in Sources */,
+				046EAE4626C24D1F00640304 /* CarDetailTableCell.swift in Sources */,
+				046EAE4026C2300100640304 /* CarDetailCollectionCell.swift in Sources */,
 				04B3915626BF87DC00E218FE /* CarCategoryCell.swift in Sources */,
 				04AB5DB626BEE44400464205 /* SceneDelegate.swift in Sources */,
 				048CCDDD26C0918500D1FE6F /* HomeScreenViewModel.swift in Sources */,
