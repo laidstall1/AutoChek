@@ -13,7 +13,7 @@ class HomeScreenViewModel {
    var carCategories = [MakeList]()
    var carListing = [CarDetailModel]()
    var filteredCarListing = [CarDetailModel]()
-   private let service = HomeScreenService()
+   private let service = CarService()
     var completion: (() -> Void)?
     
     func fetchCarMake(completion: @escaping () -> Void) {

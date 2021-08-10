@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-struct HomeScreenService {
+struct CarService {
     fileprivate var baseURL = "https://api-prod.autochek.africa/v1/inventory"
     
     func fetchCars(endPoint: String, completion: @escaping (AFDataResponse<Data?>) -> Void) {
