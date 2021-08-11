@@ -11,7 +11,7 @@ import Alamofire
 class CarDetailsViewModel {
     private var service = CarService()
     var completion: (() -> Void)?
-    var carDetailData = [CarDetails]()
+    var carDetailData = [CarDetail]()
     var carMediaData = [CarMediaList]()
     var id: String?
     
@@ -19,7 +19,7 @@ class CarDetailsViewModel {
         service.fetchCars(endPoint: "/car/\(carId)") { response in
             guard let response = response.data else { return }
             do {
-                let json =  try JSONDecoder().decode(CarDetails.self, from: response)
+                let json =  try JSONDecoder().decode(CarDetail.self, from: response)
                 self.carDetailData.append(json)
                 completion()
             } catch {

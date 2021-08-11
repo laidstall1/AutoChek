@@ -17,12 +17,28 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pyR-A8-9Yf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="414" id="8nT-dl-ZCM"/>
-                            <constraint firstAttribute="height" constant="265" id="pEW-Pk-QdV"/>
+                            <constraint firstAttribute="height" constant="250" id="pEW-Pk-QdV"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIz-vr-Tao">
+                        <rect key="frame" x="20" y="180" width="88" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrl-Of-V8K">
+                                <rect key="frame" x="17" y="9.5" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50011223240902547" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wrl-Of-V8K" firstAttribute="centerX" secondItem="bIz-vr-Tao" secondAttribute="centerX" id="0zZ-QE-KXe"/>
+                            <constraint firstItem="Wrl-Of-V8K" firstAttribute="centerY" secondItem="bIz-vr-Tao" secondAttribute="centerY" id="Wbj-qP-2Uf"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -30,13 +46,18 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="pyR-A8-9Yf" secondAttribute="trailing" id="0SB-TV-P40"/>
                 <constraint firstItem="pyR-A8-9Yf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1D8-vF-9Lh"/>
+                <constraint firstItem="bIz-vr-Tao" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="I3X-tt-GXE"/>
+                <constraint firstItem="bIz-vr-Tao" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="180" id="Pa1-j0-hys"/>
+                <constraint firstAttribute="trailing" secondItem="bIz-vr-Tao" secondAttribute="trailing" constant="306" id="QXU-gO-mOe"/>
                 <constraint firstItem="pyR-A8-9Yf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fEX-Fe-s3f"/>
+                <constraint firstAttribute="bottom" secondItem="bIz-vr-Tao" secondAttribute="bottom" constant="30" id="x7e-UT-L8G"/>
             </constraints>
             <size key="customSize" width="280" height="172"/>
             <connections>
+                <outlet property="pageImageLabel" destination="Wrl-Of-V8K" id="lpg-gC-kL8"/>
                 <outlet property="selectedCarImageView" destination="pyR-A8-9Yf" id="3Tm-HB-lhF"/>
             </connections>
-            <point key="canvasLocation" x="69.565217391304358" y="85.379464285714278"/>
+            <point key="canvasLocation" x="69.565217391304358" y="84.375"/>
         </collectionViewCell>
     </objects>
 </document>

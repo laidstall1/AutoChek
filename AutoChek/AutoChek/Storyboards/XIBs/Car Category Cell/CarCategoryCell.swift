@@ -30,7 +30,6 @@ class CarCategoryCell: UICollectionViewCell {
     
     func configure(with model: MakeList) {
         carCategoryName.text = model.name
-        print(carCategoryName.text!)
         guard let imageUrl = URL(string: model.imageURL) else {return }
         carCategoryImageView.sd_setImage(with: imageUrl)
     }

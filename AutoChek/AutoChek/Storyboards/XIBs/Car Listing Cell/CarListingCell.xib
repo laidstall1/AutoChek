@@ -63,13 +63,13 @@
                                 </constraints>
                             </stackView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q20-IX-OrB" userLabel="ImageContainerView">
-                                <rect key="frame" x="25" y="-107" width="300" height="268"/>
+                                <rect key="frame" x="17.5" y="-107" width="315" height="268"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car1" translatesAutoresizingMaskIntoConstraints="NO" id="TmR-I5-i3A">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="268"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="268"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZ2-Hh-bv0">
-                                        <rect key="frame" x="260" y="10" width="30" height="30"/>
+                                        <rect key="frame" x="275" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Hjr-G7-QNz"/>
                                             <constraint firstAttribute="height" constant="30" id="tsB-Nd-n63"/>
@@ -82,7 +82,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="0cb-fN-bfU"/>
+                                    <constraint firstAttribute="width" constant="315" id="0cb-fN-bfU"/>
                                     <constraint firstAttribute="bottom" secondItem="TmR-I5-i3A" secondAttribute="bottom" id="RYX-jJ-JMk"/>
                                     <constraint firstItem="NZ2-Hh-bv0" firstAttribute="top" secondItem="Q20-IX-OrB" secondAttribute="top" constant="10" id="aWd-2Q-waC"/>
                                     <constraint firstAttribute="trailing" secondItem="TmR-I5-i3A" secondAttribute="trailing" id="bb1-9a-2wJ"/>

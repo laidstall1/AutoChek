@@ -43,8 +43,6 @@ class HomeScreenViewModel {
         }
     }
     
-    
-    
     private func filteredUsers(_ searchText: String) {
         for searchedListing in carListing {
             guard let carName = searchedListing.title?.lowercased() else { return }
