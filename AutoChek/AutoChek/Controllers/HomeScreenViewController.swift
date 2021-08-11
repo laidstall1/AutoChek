@@ -21,14 +21,11 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9685223699, green: 0.9686879516, blue: 0.9685119987, alpha: 1)
         ConfigureCollectionView()
-        fetchCarMake()
-        fetchCarListing()
+        fetchCarMakeViewModelListener()
+        fetchCarListingViewModelListener()
+        searchCarListingViewModelListener()
         configureSearchController()
-        viewModel.completion = {
-            DispatchQueue.main.async {
-                self.carListingCollectionView.reloadData()
-            }
-        }
+        configureNavBar()
     }
     //  MARK: - Selectors
     
@@ -36,7 +33,7 @@ class HomeScreenViewController: UIViewController {
     }
     //  MARK: - Helpers
     
-    func fetchCarMake() {
+    func fetchCarMakeViewModelListener() {
         viewModel.fetchCarMake {
             DispatchQueue.main.async {
                 self.carCategoriesCollectionView.reloadData()
@@ -44,10 +41,21 @@ class HomeScreenViewController: UIViewController {
         }
     }
     
-    func fetchCarListing() {
+    func fetchCarListingViewModelListener() {
+        self.showLoader(true)
         self.viewModel.fetchCarListing {
             DispatchQueue.main.async {
                 self.carListingCollectionView.reloadData()
+                self.showLoader(false)
+            }
+        }
+    }
+    func searchCarListingViewModelListener() {
+        self.showLoader(true)
+        viewModel.completion = {
+            DispatchQueue.main.async {
+                self.carListingCollectionView.reloadData()
+                self.showLoader(false)
             }
         }
     }
@@ -61,11 +69,6 @@ class HomeScreenViewController: UIViewController {
         
         carListingCollectionView.register(CarListingCell.nib(), forCellWithReuseIdentifier: CarListingCell.identifier)
         carCategoriesCollectionView.register(CarCategoryCell.nib(), forCellWithReuseIdentifier: CarCategoryCell.identifier)
-    }
-    
-    func configureNavBar() {
-        let navImage = UIImage(named: "NavMenu")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: navImage, style: .plain, target: self, action: #selector(showMenu))
     }
     
     func configureSearchController() {

@@ -32,6 +32,7 @@ class CarDetailViewController: UIViewController {
         view.backgroundColor = .white
         configureCollectionView()
         fetchCarDetailListener()
+        fetchCarMediaListener()
         configureUI()
         buyCarButton.layer.cornerRadius = 10
     }
@@ -41,24 +42,30 @@ class CarDetailViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         fetchCarDetailListener()
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        fetchCarDetailListener()
+    }
+    
     //  MARK: - Selectors
     @IBAction func handleButtonPressed(_ sender: Any) {
     }
     
     //  MARK: - Helpers
     func fetchCarMediaListener() {
+        showLoader(true)
         viewModel.fetchCarMedia(carId: self.viewModel.id!)
             viewModel.completion = {
                 self.detailCollectionView.reloadData()
-                print("result: \(self.viewModel.carMediaData )")
         }
+        showLoader(false)
     }
     
     func fetchCarDetailListener() {
         DispatchQueue.main.async {
             self.viewModel.fetchCarDetail(carId: self.viewModel.id!) { [weak self] in
                 self?.detailCollectionView.reloadData()
-                print("\(self!.viewModel.carDetailData )")
                 self?.carNameDetails.text = "\(self?.viewModel.carDetailData[0].year ?? 0) \(self?.viewModel.carDetailData[0].model.make.name ?? "") \(self?.viewModel.carDetailData[0].model.name ?? "Car Name")"
                 self?.carMilage.text = "\(self?.viewModel.carDetailData[0].mileage ?? 0)"
                 self?.carLocation.text = "\(self!.viewModel.carDetailData[0].city)"
@@ -79,21 +86,32 @@ class CarDetailViewController: UIViewController {
         detailCollectionView.dataSource = self
         detailCollectionView.register(CarDetailCollectionCell.nib(), forCellWithReuseIdentifier: CarDetailCollectionCell.identifier)
     }
-    
+
     func configureUI() {
-        print(viewModel.carDetailData)
+        carNameDetails.text = nil
+        carMilage.text = nil
+        carLocation.text = nil
+        carPrice.text = nil
+        carStatus.text = nil
+        engineTypeLabel.text = nil
+        interiorColorLabel.text = nil
+        exteriorColorLabel.text = nil
+        vin.text = nil
+        carID.text = nil
+        transmission.text = nil
+        fuelType.text = nil
     }
 }
     //  MARK: - UICollectionViewDataSource
 extension CarDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("counttt\(viewModel.carDetailData.count)")
-        return viewModel.carDetailData.count
+        return viewModel.carMediaData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarDetailCollectionCell.identifier, for: indexPath) as! CarDetailCollectionCell
-        cell.configure(with: viewModel.carDetailData[indexPath.item])
+        cell.pageImageLabel.text = "\(indexPath.item+1) of \(viewModel.carMediaData.count)"
+        cell.configure(with: viewModel.carMediaData[indexPath.item])
             return cell
     }
 }

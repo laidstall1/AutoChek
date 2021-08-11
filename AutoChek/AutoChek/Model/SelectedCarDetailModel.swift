@@ -1,6 +1,6 @@
 import Foundation
 
-struct CarDetails: Decodable {
+struct CarDetail: Decodable {
     let id: String
     let year: Int
     let mileage: Int

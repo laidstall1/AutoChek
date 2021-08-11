@@ -39,12 +39,6 @@ class CustomTabBarViewController: UITabBarController, UITabBarControllerDelegate
         thirdNavBar.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Shop"), tag: 4)
         fifthNavBar.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Message"), tag: 5)
         
-        firstNavBar.navigationBar.prefersLargeTitles = true
-        secondNavBar.navigationBar.prefersLargeTitles = true
-        thirdNavBar.navigationBar.prefersLargeTitles = true
-        fourthNavBar.navigationBar.prefersLargeTitles = true
-        fifthNavBar.navigationBar.prefersLargeTitles = true
-        
         setViewControllers([firstNavBar, secondNavBar, thirdNavBar, fourthNavBar, fifthNavBar], animated: true)
         tabBar.backgroundColor = .white
         tabBar.alpha = 0.9
