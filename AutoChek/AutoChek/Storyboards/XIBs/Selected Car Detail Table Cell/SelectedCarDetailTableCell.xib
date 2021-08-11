@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="SelectedCarDetailTableCell" customModule="AutoChek" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019 Toyota Land Cruiser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ceh-pK-sSq">
+                        <rect key="frame" x="10" y="33" width="240" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="N2e-Ui-SZv">
+                        <rect key="frame" x="13" y="72" width="388.5" height="20"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="teY-5D-jNa">
+                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speedometer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-33-1G8">
+                                        <rect key="frame" x="0.0" y="0.5" width="20" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="09j-xy-1mU"/>
+                                            <constraint firstAttribute="width" constant="20" id="5TQ-eA-WL3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVX-jQ-4dX">
+                                        <rect key="frame" x="30" y="0.0" width="21.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="67U-vK-ZmZ">
+                                <rect key="frame" x="98.5" y="0.0" width="178" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wak-HA-Ucp">
+                                        <rect key="frame" x="0.0" y="-0.5" width="20" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="3gu-aS-osz"/>
+                                            <constraint firstAttribute="width" constant="20" id="ZTU-tL-8xT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0e-Gf-1Bh">
+                                        <rect key="frame" x="28" y="0.0" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="mGp-e9-56G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GSR-ij-9ip">
+                                <rect key="frame" x="323.5" y="0.0" width="65" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iet-cd-x77">
+                                        <rect key="frame" x="0.0" y="1.5" width="20" height="17.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="5uy-nt-zlt"/>
+                                            <constraint firstAttribute="height" constant="20" id="OwR-K0-f91"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hnk-50-Jmq">
+                                        <rect key="frame" x="30" y="0.0" width="35" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ceh-pK-sSq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="990-fM-292"/>
+                    <constraint firstItem="N2e-Ui-SZv" firstAttribute="top" secondItem="Ceh-pK-sSq" secondAttribute="bottom" constant="15" id="9ux-rB-Tyn"/>
+                    <constraint firstItem="Ceh-pK-sSq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="a0w-CZ-1sh"/>
+                    <constraint firstItem="N2e-Ui-SZv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="adc-h3-SCT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="carLocation" destination="d0e-Gf-1Bh" id="UCj-93-akJ"/>
+                <outlet property="carMilage" destination="fVX-jQ-4dX" id="joR-L2-BBB"/>
+                <outlet property="carName" destination="Ceh-pK-sSq" id="XSb-1o-E8g"/>
+                <outlet property="carStatus" destination="Hnk-50-Jmq" id="Nrd-IE-FaL"/>
+            </connections>
+            <point key="canvasLocation" x="28.985507246376812" y="33.147321428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="car" catalog="system" width="128" height="93"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="speedometer" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

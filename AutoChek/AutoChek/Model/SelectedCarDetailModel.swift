@@ -14,6 +14,7 @@ struct CarDetails: Decodable {
     let city: String
     let transmission: String
     let fuelType: String
+    let sellingCondition: String
     let bodyType: BodyType
     let interiorColor: String
     let exteriorColor: String
@@ -34,3 +35,4 @@ struct BodyType: Decodable {
     let name: String
     let imageUrl: String
 }
+

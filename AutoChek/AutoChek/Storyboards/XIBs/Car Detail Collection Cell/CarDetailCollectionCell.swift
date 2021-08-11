@@ -9,6 +9,8 @@ import UIKit
 
 class CarDetailCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var selectedCarImageView: UIImageView!
+    
     static let identifier = String(describing: CarDetailCollectionCell.self)
     
     override func awakeFromNib() {
@@ -20,7 +22,8 @@ class CarDetailCollectionCell: UICollectionViewCell {
         return UINib(nibName: CarDetailCollectionCell.identifier, bundle: nil)
     }
     
-    func configure() {
-        
+    func configure(with model: CarDetails) {
+        guard let imageUrl = URL(string: model.imageUrl) else { return }
+        selectedCarImageView.sd_setImage(with: imageUrl)
     }
 }

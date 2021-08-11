@@ -84,7 +84,6 @@ class HomeScreenViewController: UIViewController {
 
 extension HomeScreenViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(viewModel.carCategories.count)
         return collectionView == carCategoriesCollectionView ? viewModel.carCategories.count : viewModel.filteredCarListing.count
     }
     
@@ -100,7 +99,6 @@ extension HomeScreenViewController: UICollectionViewDataSource {
             return cell
         }
     }
-    
 }
 //  MARK: - UICollectionViewDelegate
 
@@ -116,7 +114,7 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         carListingCollectionView.deselectItem(at: indexPath, animated: true)
         if collectionView == carListingCollectionView {
-            let controller = CarDetailViewController()
+            let controller = UIStoryboard(name: "CarDetail", bundle: nil).instantiateViewController(withIdentifier: "carDetail") as! CarDetailViewController
             controller.viewModel.id = viewModel.filteredCarListing[indexPath.row].id!
             navigationController?.pushViewController(controller, animated: true)
         } else {
@@ -131,7 +129,6 @@ extension HomeScreenViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             viewModel.beginSearch(for: searchText)
         }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
             searchBar.resignFirstResponder()
     }
