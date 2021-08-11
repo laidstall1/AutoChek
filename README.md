@@ -6,6 +6,7 @@
 - SDWebImage
 - SDWebImageSVGCoder
 - Alamofire
+- JDProgressHUD
 
 ## How to test:
 - install cocoapods
