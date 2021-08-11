@@ -32,7 +32,6 @@ class CarDetailViewController: UIViewController {
         view.backgroundColor = .white
         configureCollectionView()
         fetchCarDetailListener()
-        fetchCarMediaListener()
         configureUI()
         buyCarButton.layer.cornerRadius = 10
     }
@@ -40,6 +39,7 @@ class CarDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = false
+        fetchCarDetailListener()
     }
     //  MARK: - Selectors
     @IBAction func handleButtonPressed(_ sender: Any) {
@@ -59,11 +59,11 @@ class CarDetailViewController: UIViewController {
             self.viewModel.fetchCarDetail(carId: self.viewModel.id!) { [weak self] in
                 self?.detailCollectionView.reloadData()
                 print("\(self!.viewModel.carDetailData )")
-                self?.carNameDetails.text = "\(self?.viewModel.carDetailData[0].model.name ?? "Car Name")"
+                self?.carNameDetails.text = "\(self?.viewModel.carDetailData[0].year ?? 0) \(self?.viewModel.carDetailData[0].model.make.name ?? "") \(self?.viewModel.carDetailData[0].model.name ?? "Car Name")"
                 self?.carMilage.text = "\(self?.viewModel.carDetailData[0].mileage ?? 0)"
                 self?.carLocation.text = "\(self!.viewModel.carDetailData[0].city)"
                 self?.carStatus.text = "\(self!.viewModel.carDetailData[0].sellingCondition)"
-                self?.carPrice.text = "\(self!.viewModel.carDetailData[0].marketplacePrice)"
+                self?.carPrice.text = "₦\(self!.viewModel.carDetailData[0].marketplacePrice)"
                 self?.engineTypeLabel.text = "\(self!.viewModel.carDetailData[0].engineType)"
                 self?.interiorColorLabel.text = "\(self!.viewModel.carDetailData[0].interiorColor)"
                 self?.exteriorColorLabel.text = "\(self!.viewModel.carDetailData[0].exteriorColor)"
